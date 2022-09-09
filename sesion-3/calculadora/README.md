@@ -45,3 +45,15 @@ Deberia ver la siguiente salida de datos
 2.0
 0.5
 ```
+
+
+## Ejecutar pruebas unitarias y de integracion
+* Pruebas unitarias
+```
+pytest tests/unit/ -v
+```
+
+* Pruebas de integracion
+```
+pytest tests/integration/ -v
+```
