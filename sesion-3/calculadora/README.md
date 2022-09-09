@@ -40,5 +40,8 @@ python ejemplo.py
 ```
 Deberia ver la siguiente salida de datos
 ```
-
+1.5
+0.5
+2.0
+0.5
 ```
