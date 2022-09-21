@@ -1,5 +1,2 @@
 .venv
-venv
-.DS_Store
-*.cpython-37.pyc
-*.pyc
+.env

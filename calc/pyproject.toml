@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "calculadora"
+version = "0.1.0"
+description = "calculadora basica"
+authors = ["Andre Bajorat"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
