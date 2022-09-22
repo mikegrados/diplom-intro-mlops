@@ -1,7 +1,6 @@
 import os
 import typer
 import pandas as pd
-from uuid import uuid4
 from datetime import datetime
 from pathlib import Path
 
@@ -21,12 +20,11 @@ def create(name: str = typer.Option("Unnamed", "-ln", "--listname")):
     """Create a new todo list"""
 
     if check_list_exists(name):
-        print(
-            "There is already a todo list with this name. Try again with another name"
-        )
-    else:
-        create_list(name)
-        print(f"Todo list {name} successfully created!")
+        print("There is already a todo list with this name.")
+        return
+
+    create_list(name)
+    print(f"Todo list {name} successfully created!")
 
 
 @app.command("list")
@@ -90,7 +88,7 @@ def update_task(
     print("Task successfully updated")
 
 
-### LIST METHODS ###
+### LIST METHODS TO BE REFACTORED ###
 
 
 def update_task_in_list(list_name, task_id, field, change):
