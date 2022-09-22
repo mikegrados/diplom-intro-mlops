@@ -1,7 +1,8 @@
 from calculadora import suma, resta
 from calculadora.tipo2 import multiplica, division
 
-from calculadora.config import settings
+from calculadora.config import settings, ROOT_DIR
+from pathlib import Path
 
 
 def ejemplo(num_1, num_2):
@@ -21,3 +22,6 @@ def ejemplo(num_1, num_2):
 if __name__ == "__main__":
     print(f"Hello {settings['NAME']}")
     ejemplo(settings["NUMBER"], 5)
+    with open(Path(ROOT_DIR, settings["DATA_PATH"], "numbers.txt")) as f:
+        lines = f.readlines()
+    print(lines)

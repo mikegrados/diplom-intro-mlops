@@ -5,3 +5,4 @@
 [default]
 NUMBER=100
 NAME="Carlos"
+DATA_PATH='data/'
