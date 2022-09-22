@@ -1,6 +1,8 @@
 from calculadora import suma, resta
 from calculadora.tipo2 import multiplica, division
 
+from calculadora.config import settings
+
 
 def ejemplo(num_1, num_2):
     res_suma = suma(num_1, num_2)
@@ -17,4 +19,5 @@ def ejemplo(num_1, num_2):
 
 
 if __name__ == "__main__":
-    ejemplo(7, 5)
+    print(f"Hello {settings['NAME']}")
+    ejemplo(settings["NUMBER"], 5)
