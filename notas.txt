@@ -1,0 +1,74 @@
+show use of python -m  with pandas file in ejemplo
+show that pandas fails for python -m
+show that relative imports work with python -m
+
+Rename app -> src/calculadora
+show relative vs absolute paths
+in calc, calc/src, in calc/src/calculadora
+
+hablar de packages etc
+
+create folder utils
+create file fraccion.py, __init__.py
+move code there
+run and fails
+update imports
+
+
+create folder operaciones
+create files tipo1.py, tipo2.py, __init__.py
+move code there, one relative, one absolute
+update imports in main
+
+show that relative fails, absolute not
+change to absolute
+
+change operaciones init file to export suma y resta
+change calc init file to export and show etc
+
+change main.py to __main__.py and explain
+
+change import to import * and explain problems 
+
+
+Add LICENSE
+Add .gitignore
+Add .env
+
+
+pip install poetry
+poetry init
+fix pytest with
+          [tool.pytest.ini_options]
+          pythonpath = [
+            "src"
+          ]
+
+dynaconf create config.py 
+
+
+          from dynaconf import Dynaconf, Validator
+          from pathlib import Path
+          settings = Dynaconf(
+              validators=[Validator('NUMBER', 'NAME', must_exist=True)],
+              envvar_prefix="DYNACONF",
+              root_path=Path(__file__).parent.parent.parent,
+              settings_files=['settings.toml', '.secrets.toml'],
+              environment=True,
+              load_dotenv=True,
+          )
+          ROOT_DIR = Path(__file__).parent.parent.parent
+
+          # `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
+          # `settings_files` = Load these files in the order.
+
+
+create settings.toml
+
+explain env vars, settings, environments
+
+set up DATA_PATH
+
+          with open(Path(ROOT_DIR, settings["DATA_PATH"], "numbers.txt")) as f:
+              lines = f.readlines()
+          print(lines)
