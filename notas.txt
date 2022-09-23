@@ -44,6 +44,9 @@ fix pytest with
             "src"
           ]
 
+poetry add pytest --group test
+
+
 dynaconf create config.py 
 
 

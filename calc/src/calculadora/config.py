@@ -2,14 +2,15 @@
 from dynaconf import Dynaconf, Validator
 from pathlib import Path
 settings = Dynaconf(
-    validators=[Validator('NUMBER', 'NAME', must_exist=True)],
+    # validators=[Validator('NUMBER', 'NAME', must_exist=True)],
     envvar_prefix="DYNACONF",
-    root_path=Path(__file__).parent.parent.parent,
+    root_path=Path(__file__).parent,
     settings_files=['settings.toml', '.secrets.toml'],
     environment=True,
     load_dotenv=True,
 )
-ROOT_DIR = Path(__file__).parent.parent.parent
+# print(settings.root_path)
+ROOT_DIR = Path(__file__).parent
 
 # `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
 # `settings_files` = Load these files in the order.
