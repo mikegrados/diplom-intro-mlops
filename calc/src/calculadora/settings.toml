@@ -1,7 +1,3 @@
-
-# [prod]
-# NUMBER=1
-# NAME="Andre"
 [default]
 NUMBER=100
 NAME="Hans"

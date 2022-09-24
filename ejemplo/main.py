@@ -1,5 +1,5 @@
-# from .pandas import print_my_name
+from .pandas import print_my_name
 
 if __name__ == "__main__":
     print("Hola")
-    # print_my_name()
+    print_my_name()

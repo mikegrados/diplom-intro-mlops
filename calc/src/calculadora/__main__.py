@@ -1,5 +1,5 @@
 from calculadora import suma, resta
-from calculadora.tipo2 import multiplica, division
+from calculadora import multiplica, division
 
 from calculadora.config import settings, ROOT_DIR
 from pathlib import Path

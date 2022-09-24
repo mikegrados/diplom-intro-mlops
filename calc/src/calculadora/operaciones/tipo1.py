@@ -7,5 +7,7 @@ def resta(a, b):
     return minuendo - sustraendo
 
 
-if __name__ == "__main__":
-    print("HAHA")
+def suma(a, b):
+    sumando_a = obtener_fracciones(a)
+    sumando_b = obtener_fracciones(b)
+    return sumando_a + sumando_b
