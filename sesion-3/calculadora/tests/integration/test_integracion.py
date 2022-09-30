@@ -8,9 +8,8 @@ from calculadora.app.operaciones import resta
 
 
 def test_divide():
-    assert (
-        suma("5", "5") * resta("5/4", "3/4")
-    ) == 5  # (5+5)*(1.25-0.75) = (10)*(0.5) = 5
+    assert (suma("5", "5") * resta("5/4", "3/4")) == 5
+    # (5+5)*(1.25-0.75) = (10)*(0.5) = 5
     # (8+7/5)*(15-3/8) = (9.4)*(14.625) = 137.475
 
 
