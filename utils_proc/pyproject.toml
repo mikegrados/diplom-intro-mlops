@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "titanic_utils"
+version = "0.1.0"
+description = ""
+authors = ["MikeG <daygoro.grados@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.23.3"
+pandas = "^1.5.0"
+scikit-learn = "^1.1.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.core.masonry.api"
