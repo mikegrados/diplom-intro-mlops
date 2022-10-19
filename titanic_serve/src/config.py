@@ -2,10 +2,9 @@ import os
 from pydantic import BaseModel
 
 BASE_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
-ROOT_DIR = os.path.realpath(os.path.join(BASE_DIR, ".."))
 
-MODEL_NAME = os.path.realpath(os.path.join(ROOT_DIR, "titanic_train\\models", "model.sav"))
-LOG_DIR = os.path.realpath(os.path.join(ROOT_DIR, "titanic_serve\\logs"))
+MODEL_NAME = os.path.realpath(os.path.join(BASE_DIR, "models", "model.sav"))
+LOG_DIR = os.path.realpath(os.path.join(BASE_DIR, "titanic_serve\\logs"))
 
 class PredictionInput(BaseModel):
     pclass: int
